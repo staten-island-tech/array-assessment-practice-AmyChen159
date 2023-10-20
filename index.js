@@ -101,8 +101,9 @@ const titles = [
 
 //print a list of books that "includes" the genre historical
 
-books.forEach((book)=> {
+books.forEach((book) => {
   console.log(`${book.authorFirst} ${book.authorLast} wrote ${book.name} in ${book.publishDate}`);
 });
-books.sort();
-console.log(books);
+
+titles.sort();
+console.log(titles);
