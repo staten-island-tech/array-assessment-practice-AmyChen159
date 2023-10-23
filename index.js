@@ -98,6 +98,7 @@ console.log(sortAge);
 titles.sort();
 console.log(titles);
 
+<<<<<<< Updated upstream
 // //Find who wrote War and Peace
 let bookName = prompt("Title of the Book")
 const authorfinder = books.filter((el) => el.name === bookName);
@@ -128,3 +129,6 @@ if (everyhundredyears === "true") {
 //print a list of books that "includes" the genre historical
 const historicalbooks = books.filter(book => book.genre.includes("historical"));
 console.log(historicalbooks);
+=======
+
+>>>>>>> Stashed changes
