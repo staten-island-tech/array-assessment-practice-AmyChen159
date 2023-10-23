@@ -99,33 +99,31 @@ titles.sort();
 console.log(titles);
 
 // //Find who wrote War and Peace
-function findAuthor() {
-  let bookName = prompt("Title of the Book")
-  const authorfinder = books.filter((el) => el.name === bookName);
-  authorfinder.forEach((el) => console.log(`${el.authorFirst} ${el.authorLast} wrote ${bookName}`));
-};
-findAuthor();
+let bookName = prompt("Title of the Book")
+const authorfinder = books.filter((el) => el.name === bookName);
+authorfinder.forEach((el) => console.log(`${el.authorFirst} ${el.authorLast} wrote ${bookName}`));
 
 // //how many books were written before 1900?
 const before1900 = books.filter((el) => el.publishDate < 1900);
-const number = before1900.length;
-console.log(`${number} book(s) were written before 1900`);
+console.log(`${before1900.length} book(s) were written before 1900`);
 
 //was there at least one book published within the last 100 years?
 const currentYear = new Date().getFullYear();
-function hundredyears() {
-  const hundredyears = books.filter(book => currentYear - book.publishDate <= 100)
-  if (hundredyears.length > 0) {
-    console.log("yes")
-  } else {
-    console.log("no")
-  }
+const hundredyears = books.filter(book => currentYear - book.publishDate <= 100)
+if (hundredyears.length > 0) {
+  console.log("yes")
+} else {
+  console.log("no") 
 }
-hundredyears();
 
 //was every book published within the last 100 years?
 const everyhundredyears = books.every(book => currentYear - book.publishDate <= 100)
-console.log(`${everyhundredyears}`);
+// console.log(`${everyhundredyears}`);
+if (everyhundredyears === "true") {
+  console.log("yes")
+} else {
+  console.log("no")
+}
 
 //print a list of books that "includes" the genre historical
 const historicalbooks = books.filter(book => book.genre.includes("historical"));
